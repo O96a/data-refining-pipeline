@@ -1,5 +1,4 @@
 # main.py
-# Data-Refining-Pipeline: Gemini Text Processor (Local Version)
 
 import os
 import json
