@@ -39,10 +39,10 @@ A state-of-the-art, flexible, and extensible tool for transforming raw conversat
 ```
 Enter your Google AI Studio API key: <your-api-key>
 Modify system prompt? (y/n): n
-Enter the path to your input text file: sudanese_dataset_samples1.txt
-Processing sudanese_dataset_samples1.txt with Gemini...
+Enter the path to your input text file: dataset_samples.txt
+Processing dataset_samples.txt with Gemini...
 Processed: ...
-Processing complete! Output saved as: gemini_output_sudanese_dataset_samples1.txt.jsonl
+Processing complete! Output saved as: gemini_output_dataset_samples1.txt.jsonl
 ```
 
 ## System Prompt Customization
