@@ -42,7 +42,7 @@ Modify system prompt? (y/n): n
 Enter the path to your input text file: dataset_samples.txt
 Processing dataset_samples.txt with Gemini...
 Processed: ...
-Processing complete! Output saved as: gemini_output_dataset_samples1.txt.jsonl
+Processing complete! Output saved as: gemini_output_dataset_samples.txt.jsonl
 ```
 
 ## System Prompt Customization
