@@ -1,0 +1,4 @@
+google-generativeai
+tqdm
+PyPDF2
+python-docx
