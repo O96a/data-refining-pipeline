@@ -1,6 +1,6 @@
 # Gemini Data Refining Pipeline
 
-A state-of-the-art, flexible, and extensible tool for transforming raw conversational data (TXT, PDF, DOCX) into high-quality JSONL datasets for fine-tuning large language models (LLMs).
+This project is a Python-based, flexible, and extensible tool for transforming raw conversational data (TXT, PDF, DOCX) into high-quality JSONL datasets for fine-tuning large language models (LLMs).
 
 ## Features
 - **Multi-format Input:** Supports `.txt`, `.pdf`, and `.docx` files.
