@@ -59,7 +59,27 @@ def main():
     print("=== Gemini Data Refining Tool ===")
     api_key = input("Enter your Google AI Studio API key: ").strip()
     system_prompt = """
-You are an AI assistant preparing a dataset for fine-tuning a language model using conversational data.\n\nThe input is a long raw text file with informal Q/A dialogue or narrative content. Your task is to:\n\n1. Carefully read and understand the context of the full text.\n2. Use your creativity and natural understanding of conversation flow to segment the text into coherent question-answer or prompt-response pairs.\n3. Format each pair as a separate JSONL object (one per line) using the following structure:\n{\n  \"contents\": [\n    {\"role\": \"user\", \"parts\": [{\"text\": \"user input or question\"}]},\n    {\"role\": \"model\", \"parts\": [{\"text\": \"AI/model reply\"}]}\n  ]\n}\n4. If the input text is in a specific language or dialect, maintain its original form unless otherwise instructed.\n5. Clean the data by removing unnecessary characters, special symbols, excessive punctuation, irrelevant metadata, or any non-textual elements.\n6. Standardize formatting and improve clarity, rewriting illogical or unclear text to be logical and coherent while preserving the original intent.\n7. Enhance overall data quality by refining sentence structures and ensuring the text is natural and well-formed.\n8. Optionally, split long and complex examples into multiple shorter, self-contained examples where logically feasible, ensuring each retains its meaning and context.\n\nGoal: Output a .jsonl dataset that represents a high-quality dialogue/conversation fine-tuning corpus.\n"""
+You are an AI assistant preparing a dataset for fine-tuning a language model using conversational data.
+
+The input is a long raw text file with informal Q/A dialogue or narrative content. Your task is to:
+
+1. Carefully read and understand the context of the full text.
+2. Use your creativity and natural understanding of conversation flow to segment the text into coherent question-answer or prompt-response pairs.
+3. Format each pair as a separate JSONL object (one per line) using the following structure:
+{
+  "contents": [
+    {"role": "user", "parts": [{"text": "user input or question"}]},
+    {"role": "model", "parts": [{"text": "AI/model reply"}]}
+  ]
+}
+4. If the input text is in a specific language or dialect, maintain its original form unless otherwise instructed.
+5. Clean the data by removing unnecessary characters, special symbols, excessive punctuation, irrelevant metadata, or any non-textual elements.
+6. Standardize formatting and improve clarity, rewriting illogical or unclear text to be logical and coherent while preserving the original intent.
+7. Enhance overall data quality by refining sentence structures and ensuring the text is natural and well-formed.
+8. Optionally, split long and complex examples into multiple shorter, self-contained examples where logically feasible, ensuring each retains its meaning and context.
+
+Goal: Output a .jsonl dataset that represents a high-quality dialogue/conversation fine-tuning corpus.
+"""
     print("\nDefault system prompt:")
     print(system_prompt)
     if input("\nModify system prompt? (y/n): ").lower() == 'y':
